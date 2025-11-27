@@ -3,17 +3,17 @@ on: push
 jobs:
   anchor-example:
     runs-on: ubuntu-latest
-    env: &my-env
-      VAR_1: var1
-      VAR_2: var2
-      VAR_3: var3
+    # env: &my-env
+    #   VAR_1: var1
+    #   VAR_2: var2
+    #   VAR_3: var3
     steps:
       - run: echo "anchor saved"
   using-custom-actions:
     runs-on: ubuntu-latest
-    env:
-      <<: *my-env
-      VAR_3: anothervar3
+    # env:
+    #   <<: *my-env
+    #   VAR_3: anothervar3
     steps:
       - uses: /samurodriguez/.github/actions/greeting@main
         with:
