@@ -1,0 +1,16 @@
+name: learning anchors
+on: push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps: &basic-setup
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v6
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - <<: *basic-setup
+      - run: echo "deploying..."
+      - uses: /samurodriguez/.github/actions/greeting@main
+        with:
+          name: Paco
