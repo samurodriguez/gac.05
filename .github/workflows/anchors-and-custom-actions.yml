@@ -15,10 +15,10 @@ jobs:
     #   <<: *my-env
     #   VAR_3: anothervar3
     steps:
-      - uses: /samurodriguez/.github/actions/greeting@main
+      - uses: samurodriguez/.github/actions/greeting@main
         with:
           name: Paco
-      - uses: /samurodriguez/.github/actions/notify-slack@main
+      - uses: samurodriguez/.github/actions/notify-slack@main
         id: notify-slack
         with:
           message: Holaaa
@@ -26,4 +26,4 @@ jobs:
           type: danger
       - run: echo ${{ steps.notify-slack.outputs.message-sent-at }}
   reusing-workflow:
-    uses: /samurodriguez/.github/.github/workflows/setup-app.yml@main
+    uses: samurodriguez/.github/.github/workflows/setup-app.yml@main
