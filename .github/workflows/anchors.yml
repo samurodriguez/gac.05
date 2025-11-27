@@ -18,3 +18,4 @@ jobs:
         with:
           message: Holaaa
           webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }}
+          type: danger
