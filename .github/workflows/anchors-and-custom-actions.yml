@@ -27,3 +27,5 @@ jobs:
       - run: echo ${{ steps.notify-slack.outputs.message-sent-at }}
   reusing-workflow:
     uses: samurodriguez/.github/.github/workflows/setup-app.yml@main
+    with:
+      node-version: 24
