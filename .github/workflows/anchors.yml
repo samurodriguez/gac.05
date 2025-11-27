@@ -20,4 +20,4 @@ jobs:
           message: Holaaa
           webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }}
           type: danger
-      - run: echo ${{ outputs.notify-slack.message-sent-at }}
+      - run: echo ${{ steps.notify-slack.outputs.message-sent-at }}
