@@ -1,15 +1,15 @@
 name: learning anchors
 on: push
 jobs:
-  # test:
-  #   runs-on: ubuntu-latest
-  #   steps: &basic-setup
-  #     - uses: actions/checkout@v5
-  #     - uses: actions/setup-node@v6
+  test:
+    runs-on: ubuntu-latest
+    steps: &basic-setup
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v6
   greeting:
     runs-on: ubuntu-latest
     steps:
-      # - <<: *basic-setup
+      - *basic-setup
       - run: echo "deploying..."
       - uses: /samurodriguez/.github/actions/greeting@main
         with:
